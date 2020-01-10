@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	font-family: "Overpass", sans-serif;
+}
+
+.header{
+	padding: 20px 45px;
+}
+
+.header img{
+	width: 138px;
+    height: auto;
+}
+
+.title p{
+	color: #003366;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.title p .highlight{
+	color: #f90; 
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-content: center;
+    grid-gap: 20px;
+    padding: 50px;
+}
+
+figure {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s linear;
+    vertical-align: bottom;
+}
+
+figure:hover img {
+    transform: scale(1.2);
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 15px;
+    opacity: 0;
+    transition: all 1s linear;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+figure:hover figcaption p{
+	font-size: 14px;
+}
+
+figcaption a {
+    color: #f90;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title p{
+	font-family: 'Lora', serif;
+	padding-bottom: 20px;
+	font-size: 40px;
+}
+
+/*ellipse animation*/
+
+.title-effect{
+	position: relative;
+}
+
+.title-effect .ellipse {
+    width: 50px;
+    height: 50px;
+    background: #f90;
+    border-radius: 50%;
+    animation: ellipse-animation 2.4s cubic-bezier(0, -0.26, 0.32, 1.22) 0s infinite;
+    transform: rotate(0deg);
+    margin: auto;
+}
+
+.title-effect i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    font-size: 20px;
+}
+
+@keyframes ellipse-animation{
+	0% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+12.5% {
+    border-top-left-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(45deg);
+}
+25% {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(90deg);
+}
+37.5% {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 50%;
+    transform: rotate(135deg);
+}
+50% {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: rotate(180deg);
+}
+62.5% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: rotate(225deg);
+}
+75% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: rotate(270deg);
+}
+87.5% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 0;
+    transform: rotate(315deg);
+}
+100% {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: rotate(360deg);
+}
+}
