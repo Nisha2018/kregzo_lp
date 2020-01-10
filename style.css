@@ -9,21 +9,24 @@ body{
 }
 
 .header{
-	padding: 20px 45px;
+    padding: 20px 28px;
 }
 
-.header img{
-	width: 138px;
+.header img {
+    width: 120px;
     height: auto;
 }
 
 .title p{
 	color: #003366;
-    font-size: 32px;
     font-weight: bold;
+    font-size: 25px;
     text-transform: uppercase;
     text-align: center;
+    font-family: 'Lora', serif;
+    padding-bottom: 20px;
 }
+
 
 .title p .highlight{
 	color: #f90; 
@@ -31,11 +34,11 @@ body{
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-content: center;
     grid-gap: 20px;
-    padding: 50px;
+    padding: 30px 25px;
 }
 
 figure {
@@ -87,18 +90,13 @@ figcaption a {
     font-weight: bold;
 }
 
-.title p{
-	font-family: 'Lora', serif;
-	padding-bottom: 20px;
-	font-size: 40px;
-}
-
 .contact{
-	padding: 0px 50px 50px;
     display: grid;
-    line-height: 30px;
-    grid-template-columns: auto 1fr;
-    grid-column-gap: 55px;
+    grid-template-columns: 1fr;
+    padding: 25px;
+    line-height: 25px;
+    grid-row-gap: 30px;
+    text-align: center;
 }
 
 .contact p{
@@ -214,3 +212,39 @@ figcaption a {
     transform: rotate(360deg);
 }
 }
+
+/*tab view*/
+@media only screen and (min-width: 767px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+} 
+
+/*desktop view*/
+@media only screen and (min-width: 991px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 50px;
+    }
+
+    .title p{
+        font-size: 40px;
+    }
+
+    .header{
+        padding: 20px 45px;
+    }
+
+    .header img{
+        width: 138px;
+    } 
+    
+    .contact{
+         grid-template-columns: auto 1fr;   
+         padding: 0px 50px 50px;
+         line-height: 30px;
+         grid-column-gap: 55px; 
+         text-align: left;
+    }
+
+}    
