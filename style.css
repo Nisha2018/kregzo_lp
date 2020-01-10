@@ -93,6 +93,38 @@ figcaption a {
 	font-size: 40px;
 }
 
+.contact{
+	padding: 0px 50px 50px;
+    display: grid;
+    line-height: 30px;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 55px;
+}
+
+.contact p{
+	font-size: 20px;
+}
+
+.contact .btn{
+	align-self: center;
+}
+
+.contact .btn a{
+	text-decoration: none;
+    background: #f90;
+    padding: 18px 30px;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact .btn a:hover{
+	background: #d68710;
+}
+
+
 /*ellipse animation*/
 
 .title-effect{
