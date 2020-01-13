@@ -56,6 +56,8 @@ figure {
 
 .event{
     transition: all 0.5s linear;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 figure:hover img, .event:hover img {
